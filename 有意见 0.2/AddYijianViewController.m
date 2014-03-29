@@ -27,6 +27,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    UIBarButtonItem * it = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:self action:@selector(myReturned:)];
+    [self.navigationItem setLeftBarButtonItem:it];
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,7 +37,22 @@
     // Dispose of any resources that can be recreated.
 }
 
--(IBAction)returned:(UIStoryboardSegue *)segue {
+-(IBAction)myReturned:(UIStoryboardSegue *)segue {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+-(IBAction)submit:(id)sender
+{
+    if(YES){
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+    
+    
+}
+
+- (IBAction)TextField_DidEndOnExit:(id)sender {
+    // 隐藏键盘.
+    [sender resignFirstResponder];
 }
 
 /*

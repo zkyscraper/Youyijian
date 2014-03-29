@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F572BB4418E6981E002C53DE /* heart_full@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F572BB4218E6981E002C53DE /* heart_full@2x.png */; };
+		F572BB4618E698A3002C53DE /* heart_full.png in Resources */ = {isa = PBXBuildFile; fileRef = F572BB4518E698A3002C53DE /* heart_full.png */; };
+		F572BB4918E6C37F002C53DE /* DrawBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F572BB4818E6C37F002C53DE /* DrawBar.m */; };
 		F5F78B3918E5BE45004EE012 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5F78B3818E5BE45004EE012 /* Foundation.framework */; };
 		F5F78B3B18E5BE45004EE012 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5F78B3A18E5BE45004EE012 /* CoreGraphics.framework */; };
 		F5F78B3D18E5BE45004EE012 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5F78B3C18E5BE45004EE012 /* UIKit.framework */; };
@@ -57,6 +60,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F572BB4218E6981E002C53DE /* heart_full@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heart_full@2x.png"; sourceTree = "<group>"; };
+		F572BB4518E698A3002C53DE /* heart_full.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart_full.png; sourceTree = "<group>"; };
+		F572BB4718E6C37F002C53DE /* DrawBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawBar.h; sourceTree = "<group>"; };
+		F572BB4818E6C37F002C53DE /* DrawBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawBar.m; sourceTree = "<group>"; };
 		F5F78B3518E5BE45004EE012 /* 有意见 0.2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "有意见 0.2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5F78B3818E5BE45004EE012 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F5F78B3A18E5BE45004EE012 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -177,6 +184,8 @@
 				F5F78BA118E646C9004EE012 /* ObjectListTableViewController.m */,
 				F5F78BA318E646E9004EE012 /* ObjectListTableViewCell.h */,
 				F5F78BA418E646E9004EE012 /* ObjectListTableViewCell.m */,
+				F572BB4718E6C37F002C53DE /* DrawBar.h */,
+				F572BB4818E6C37F002C53DE /* DrawBar.m */,
 				F5F78B9918E5D52F004EE012 /* AddYijianViewController.h */,
 				F5F78B9A18E5D52F004EE012 /* AddYijianViewController.m */,
 				F5F78B9618E5D3BF004EE012 /* YijianUINavigationItem.h */,
@@ -202,6 +211,8 @@
 			children = (
 				F5F78B7D18E5C830004EE012 /* heart_empty.png */,
 				F5F78B7E18E5C830004EE012 /* heart_empty@2x.png */,
+				F572BB4518E698A3002C53DE /* heart_full.png */,
+				F572BB4218E6981E002C53DE /* heart_full@2x.png */,
 				F5F78B8118E5C854004EE012 /* Icon-80.png */,
 				F5F78B8218E5C854004EE012 /* Icon.png */,
 				F5F78B8318E5C854004EE012 /* Icon@2x.png */,
@@ -316,6 +327,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F572BB4418E6981E002C53DE /* heart_full@2x.png in Resources */,
+				F572BB4618E698A3002C53DE /* heart_full.png in Resources */,
 				F5F78B8418E5C854004EE012 /* Icon-80.png in Resources */,
 				F5F78B8618E5C854004EE012 /* Icon@2x.png in Resources */,
 				F5F78B7718E5C675004EE012 /* icon_object_up.png in Resources */,
@@ -361,6 +374,7 @@
 				F5F78B4918E5BE45004EE012 /* YijianAppDelegate.m in Sources */,
 				F5F78B8F18E5D300004EE012 /* YijianUINavigationViewController.m in Sources */,
 				F5F78B4518E5BE45004EE012 /* main.m in Sources */,
+				F572BB4918E6C37F002C53DE /* DrawBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -567,6 +581,7 @@
 				F5F78B6918E5BE45004EE012 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F5F78B6A18E5BE45004EE012 /* Build configuration list for PBXNativeTarget "有意见 0.2Tests" */ = {
 			isa = XCConfigurationList;
@@ -575,6 +590,7 @@
 				F5F78B6C18E5BE45004EE012 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,6 +7,7 @@
 //
 
 #import "ObjectListTableViewController.h"
+#import "ObjectListTableViewCell.h"
 
 @interface ObjectListTableViewController ()
 
@@ -32,7 +33,32 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    _objectNames =@[@"百度搜索",
+                    @"小米手机",
+                    @"中国国航",
+                    @"上岛咖啡",
+                    @"QQ",
+                    @"ThinkPad",
+                    @"去哪儿",
+                    @"联想笔记本",
+                    @"大众高尔夫",
+                    @"青岛啤酒"
+                    ];
+    _objectNumbers =@[@"1000",
+                      @"900",
+                      @"800",
+                      @"700",
+                      @"600",
+                      @"500",
+                      @"400",
+                      @"300",
+                      @"200",
+                      @"100"
+                      ];
+
 }
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -44,28 +70,36 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
+
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
+
     // Return the number of rows in the section.
-    return 0;
+    return _objectNames.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ObjectList" forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"ObjectListCell";
+    ObjectListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    // Configure the cell...
+    if (cell == nil) {
+        cell = [[ObjectListTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell.contentView.backgroundColor = [UIColor clearColor];
+    }
     
+    cell.textLabel.text = [_objectNames objectAtIndex:indexPath.row];
+    CGFloat length = [[_objectNumbers objectAtIndex:indexPath.row] floatValue] / 3;
+    cell.drawWidth = length;
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

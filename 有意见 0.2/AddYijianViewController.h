@@ -15,4 +15,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *objectTextField;
 @property (weak, nonatomic) IBOutlet UITextField *contentTextField;
 
+
+
+-(IBAction)submit:(id)sender;
+-(IBAction)TextField_DidEndOnExit:(id)sender;
 @end

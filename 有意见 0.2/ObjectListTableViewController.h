@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface ObjectListTableViewController : UITableViewController
+@property (nonatomic,strong) NSArray *objectNames;
+@property (nonatomic,strong) NSArray * objectNumbers;
+
 
 @end

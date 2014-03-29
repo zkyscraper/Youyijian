@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface ObjectListTableViewCell : UITableViewCell
+{
+    UIView *_backgroudView;
+}
+@property (nonatomic) CGFloat drawWidth;
 
 @end
