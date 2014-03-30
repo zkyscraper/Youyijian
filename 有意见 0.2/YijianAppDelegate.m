@@ -13,6 +13,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    locationManager = [[CLLocationManager alloc]init];
+    [locationManager setDelegate:self];
+    
+    [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
+    [locationManager startUpdatingLocation];
+    
+    
     return YES;
 }
 							
@@ -41,6 +48,25 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+-(void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+{
+    NSLog(@"%@",newLocation);
+}
+
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+{
+    NSLog(@"%@",locations);
+}
+
+-(void) locationManager:(CLLocationManager *) manager didFailWithError:(NSError *)error
+{
+    NSLog(@"Could not find location %@",error);
+}
+-(void)dealloc
+{
+    [locationManager setDelegate:nil];
 }
 
 @end

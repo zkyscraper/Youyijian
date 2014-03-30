@@ -9,9 +9,16 @@
 #import <UIKit/UIKit.h>
 
 @interface ObjectListTableViewCell : UITableViewCell
-{
-    UIView *_backgroudView;
-}
+@property (weak, nonatomic) IBOutlet UIView *objectNumberRect;
+@property (weak, nonatomic) IBOutlet UILabel *objectNuberLongRect;
+
+@property (weak, nonatomic) IBOutlet UILabel *objectTilteName;
+
+//{
+//    UIView *_backgroudView;
+//}
+
 @property (nonatomic) CGFloat drawWidth;
+
 
 @end

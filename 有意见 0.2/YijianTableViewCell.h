@@ -12,6 +12,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *titleButton;
 @property (weak, nonatomic) IBOutlet UILabel *contentLabel;
 @property (weak, nonatomic) IBOutlet UIButton *tongganButton;
+@property (nonatomic) int myId;
 
 
 

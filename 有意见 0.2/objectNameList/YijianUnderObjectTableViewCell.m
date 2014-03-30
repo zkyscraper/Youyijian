@@ -1,14 +1,14 @@
 //
-//  YijianTableViewCell.m
-//  有意见 0.1
+//  YijianUnderObjectTableViewCell.m
+//  有意见 0.2
 //
-//  Created by shao on 14-3-25.
-//  Copyright (c) 2014年 shao. All rights reserved.
+//  Created by shao on 14-3-30.
+//  Copyright (c) 2014年 DM. All rights reserved.
 //
 
-#import "YijianTableViewCell.h"
+#import "YijianUnderObjectTableViewCell.h"
 
-@implementation YijianTableViewCell
+@implementation YijianUnderObjectTableViewCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -38,13 +38,6 @@
 {
     if(!self.tongganButton.selected){
         [self.tongganButton setSelected:YES];
-    }
-}
-
--(IBAction)selectObject:(id)sender
-{
-    if(!self.selected){
-        [self setSelected:YES];
     }
 }
 

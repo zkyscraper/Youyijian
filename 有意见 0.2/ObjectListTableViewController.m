@@ -8,6 +8,7 @@
 
 #import "ObjectListTableViewController.h"
 #import "ObjectListTableViewCell.h"
+#import "YijianUnderObjectNameTableViewController.h"
 
 @interface ObjectListTableViewController ()
 
@@ -83,10 +84,10 @@
 }
 
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (ObjectListTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 //    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ObjectList" forIndexPath:indexPath];
-    static NSString *CellIdentifier = @"ObjectListCell";
+    static NSString *CellIdentifier = @"ObjectListTableViewCell";
     ObjectListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (cell == nil) {
@@ -94,9 +95,19 @@
         cell.contentView.backgroundColor = [UIColor clearColor];
     }
     
-    cell.textLabel.text = [_objectNames objectAtIndex:indexPath.row];
-    CGFloat length = [[_objectNumbers objectAtIndex:indexPath.row] floatValue] / 3;
-    cell.drawWidth = length;
+//    cell.textLabel.frame = CGRectMake(40, 30, 150, 20);
+//    cell.textLabel.textAlignment =NSTextAlignmentLeft;
+
+    cell.objectTilteName.text = [_objectNames objectAtIndex:indexPath.row];
+    cell.objectTilteName.text = [cell.objectTilteName.text stringByAppendingString:@"    有 "];
+     cell.objectTilteName.text = [cell.objectTilteName.text stringByAppendingString:[_objectNumbers objectAtIndex:indexPath.row]];
+    cell.objectTilteName.text = [cell.objectTilteName.text stringByAppendingString:@" 条意见"];
+//    cell.textLabel.textColor = [UIColor lightGrayColor];
+//    cell.textLabel.font = [UIFont fontWithName:@"黑体" size:15];
+    
+//    CGFloat length = [[_objectNumbers objectAtIndex:indexPath.row] floatValue] / 3;
+//    [cell setDrawWidth:length];
+    
     return cell;
 }
 
@@ -139,7 +150,7 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -147,7 +158,14 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([[segue identifier] isEqualToString:@"ShowObjectYijian"]) {
+        YijianUnderObjectNameTableViewController *detailViewController = [segue destinationViewController];
+        NSIndexPath *myIndexPath = [self.tableView indexPathForSelectedRow];
+        int row = [myIndexPath row];
+        detailViewController.name = _objectNames[row];
+    }
+    
 }
-*/
+
 
 @end

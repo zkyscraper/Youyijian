@@ -15,9 +15,7 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         // Initialization code
-        _backgroudView = [[UIView alloc] init];
-        _backgroudView.backgroundColor = [UIColor colorWithRed:0.6 green:0.6 blue:0.6 alpha:1.0];
-        [self.contentView addSubview:_backgroudView];
+
         
     }
     return self;
@@ -45,8 +43,11 @@
 - (void)setDrawWidth:(CGFloat)drawWidth
 {
 //    self.backgroundColor = [UIColor redColor];
+    
+    
     _drawWidth = drawWidth;
-    _backgroudView.frame = CGRectMake(20, 20, drawWidth, 27);
+    _objectNumberRect.frame = CGRectMake(12, 16, drawWidth, 27);
+    _objectNumberRect.backgroundColor =[UIColor darkGrayColor];
     
 //    CGContextRef ctx = UIGraphicsGetCurrentContext();
 //    

@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface YijianAppDelegate : UIResponder <UIApplicationDelegate>
-
+@interface YijianAppDelegate : UIResponder <UIApplicationDelegate, CLLocationManagerDelegate>
+{
+    CLLocationManager *locationManager;
+}
 @property (strong, nonatomic) UIWindow *window;
 
 @end

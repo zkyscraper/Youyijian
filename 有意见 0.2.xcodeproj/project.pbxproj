@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F5649AAB18E7B08A00F11CFA /* YijianUnderObjectNameTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5649AAA18E7B08A00F11CFA /* YijianUnderObjectNameTableViewController.m */; };
+		F5649AB118E7B74800F11CFA /* YijianUnderObjectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5649AB018E7B74800F11CFA /* YijianUnderObjectTableViewCell.m */; };
+		F5649AB618E7EFFA00F11CFA /* bubble.png in Resources */ = {isa = PBXBuildFile; fileRef = F5649AB418E7EFFA00F11CFA /* bubble.png */; };
+		F5649AB718E7EFFA00F11CFA /* bubble@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5649AB518E7EFFA00F11CFA /* bubble@2x.png */; };
+		F5649ABA18E81B1A00F11CFA /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5649AB918E81B1A00F11CFA /* MapViewController.m */; };
+		F5649ABD18E8337900F11CFA /* BNRMapPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = F5649ABC18E8337900F11CFA /* BNRMapPoint.m */; };
 		F572BB4418E6981E002C53DE /* heart_full@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F572BB4218E6981E002C53DE /* heart_full@2x.png */; };
 		F572BB4618E698A3002C53DE /* heart_full.png in Resources */ = {isa = PBXBuildFile; fileRef = F572BB4518E698A3002C53DE /* heart_full.png */; };
 		F572BB4918E6C37F002C53DE /* DrawBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F572BB4818E6C37F002C53DE /* DrawBar.m */; };
@@ -60,10 +66,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F5649AA918E7B08A00F11CFA /* YijianUnderObjectNameTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YijianUnderObjectNameTableViewController.h; path = ../../YijianUnderObjectNameTableViewController.h; sourceTree = "<group>"; };
+		F5649AAA18E7B08A00F11CFA /* YijianUnderObjectNameTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YijianUnderObjectNameTableViewController.m; path = ../../YijianUnderObjectNameTableViewController.m; sourceTree = "<group>"; };
+		F5649AAF18E7B74800F11CFA /* YijianUnderObjectTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YijianUnderObjectTableViewCell.h; sourceTree = "<group>"; };
+		F5649AB018E7B74800F11CFA /* YijianUnderObjectTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YijianUnderObjectTableViewCell.m; sourceTree = "<group>"; };
+		F5649AB418E7EFFA00F11CFA /* bubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubble.png; sourceTree = "<group>"; };
+		F5649AB518E7EFFA00F11CFA /* bubble@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubble@2x.png"; sourceTree = "<group>"; };
+		F5649AB818E81B1A00F11CFA /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		F5649AB918E81B1A00F11CFA /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		F5649ABB18E8337900F11CFA /* BNRMapPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRMapPoint.h; sourceTree = "<group>"; };
+		F5649ABC18E8337900F11CFA /* BNRMapPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRMapPoint.m; sourceTree = "<group>"; };
 		F572BB4218E6981E002C53DE /* heart_full@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heart_full@2x.png"; sourceTree = "<group>"; };
 		F572BB4518E698A3002C53DE /* heart_full.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart_full.png; sourceTree = "<group>"; };
-		F572BB4718E6C37F002C53DE /* DrawBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawBar.h; sourceTree = "<group>"; };
-		F572BB4818E6C37F002C53DE /* DrawBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawBar.m; sourceTree = "<group>"; };
+		F572BB4718E6C37F002C53DE /* DrawBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DrawBar.h; path = ../DrawBar.h; sourceTree = "<group>"; };
+		F572BB4818E6C37F002C53DE /* DrawBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DrawBar.m; path = ../DrawBar.m; sourceTree = "<group>"; };
 		F5F78B3518E5BE45004EE012 /* 有意见 0.2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "有意见 0.2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5F78B3818E5BE45004EE012 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F5F78B3A18E5BE45004EE012 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -96,10 +112,10 @@
 		F5F78B8118E5C854004EE012 /* Icon-80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-80.png"; sourceTree = "<group>"; };
 		F5F78B8218E5C854004EE012 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		F5F78B8318E5C854004EE012 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
-		F5F78B8718E5CDA7004EE012 /* YijianTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YijianTableViewController.h; sourceTree = "<group>"; };
-		F5F78B8818E5CDA7004EE012 /* YijianTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YijianTableViewController.m; sourceTree = "<group>"; };
-		F5F78B8918E5CDA7004EE012 /* YijianTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YijianTableViewCell.h; sourceTree = "<group>"; };
-		F5F78B8A18E5CDA7004EE012 /* YijianTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YijianTableViewCell.m; sourceTree = "<group>"; };
+		F5F78B8718E5CDA7004EE012 /* YijianTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YijianTableViewController.h; path = "有意见 0.2/YijianTableViewController.h"; sourceTree = SOURCE_ROOT; };
+		F5F78B8818E5CDA7004EE012 /* YijianTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YijianTableViewController.m; path = "有意见 0.2/YijianTableViewController.m"; sourceTree = SOURCE_ROOT; };
+		F5F78B8918E5CDA7004EE012 /* YijianTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YijianTableViewCell.h; path = "有意见 0.2/YijianTableViewCell.h"; sourceTree = SOURCE_ROOT; };
+		F5F78B8A18E5CDA7004EE012 /* YijianTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YijianTableViewCell.m; path = "有意见 0.2/YijianTableViewCell.m"; sourceTree = SOURCE_ROOT; };
 		F5F78B8D18E5D300004EE012 /* YijianUINavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YijianUINavigationViewController.h; sourceTree = "<group>"; };
 		F5F78B8E18E5D300004EE012 /* YijianUINavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YijianUINavigationViewController.m; sourceTree = "<group>"; };
 		F5F78B9018E5D36C004EE012 /* YijianUINavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YijianUINavigationBar.h; sourceTree = "<group>"; };
@@ -110,10 +126,10 @@
 		F5F78B9A18E5D52F004EE012 /* AddYijianViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddYijianViewController.m; sourceTree = "<group>"; };
 		F5F78B9C18E64465004EE012 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F5F78B9E18E64470004EE012 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		F5F78BA018E646C9004EE012 /* ObjectListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectListTableViewController.h; sourceTree = "<group>"; };
-		F5F78BA118E646C9004EE012 /* ObjectListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectListTableViewController.m; sourceTree = "<group>"; };
-		F5F78BA318E646E9004EE012 /* ObjectListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectListTableViewCell.h; sourceTree = "<group>"; };
-		F5F78BA418E646E9004EE012 /* ObjectListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectListTableViewCell.m; sourceTree = "<group>"; };
+		F5F78BA018E646C9004EE012 /* ObjectListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjectListTableViewController.h; path = ../ObjectListTableViewController.h; sourceTree = "<group>"; };
+		F5F78BA118E646C9004EE012 /* ObjectListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ObjectListTableViewController.m; path = ../ObjectListTableViewController.m; sourceTree = "<group>"; };
+		F5F78BA318E646E9004EE012 /* ObjectListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjectListTableViewCell.h; path = ../ObjectListTableViewCell.h; sourceTree = "<group>"; };
+		F5F78BA418E646E9004EE012 /* ObjectListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ObjectListTableViewCell.m; path = ../ObjectListTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +158,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F5649AAE18E7B20400F11CFA /* objectNameList */ = {
+			isa = PBXGroup;
+			children = (
+				F5F78BA018E646C9004EE012 /* ObjectListTableViewController.h */,
+				F5F78BA118E646C9004EE012 /* ObjectListTableViewController.m */,
+				F5F78BA318E646E9004EE012 /* ObjectListTableViewCell.h */,
+				F5F78BA418E646E9004EE012 /* ObjectListTableViewCell.m */,
+				F572BB4718E6C37F002C53DE /* DrawBar.h */,
+				F572BB4818E6C37F002C53DE /* DrawBar.m */,
+				F5649AA918E7B08A00F11CFA /* YijianUnderObjectNameTableViewController.h */,
+				F5649AAA18E7B08A00F11CFA /* YijianUnderObjectNameTableViewController.m */,
+				F5649AAF18E7B74800F11CFA /* YijianUnderObjectTableViewCell.h */,
+				F5649AB018E7B74800F11CFA /* YijianUnderObjectTableViewCell.m */,
+			);
+			path = objectNameList;
+			sourceTree = "<group>";
+		};
+		F5649AB218E7ED1400F11CFA /* Yijianmap */ = {
+			isa = PBXGroup;
+			children = (
+				F5649AB818E81B1A00F11CFA /* MapViewController.h */,
+				F5649AB918E81B1A00F11CFA /* MapViewController.m */,
+				F5649ABB18E8337900F11CFA /* BNRMapPoint.h */,
+				F5649ABC18E8337900F11CFA /* BNRMapPoint.m */,
+			);
+			path = Yijianmap;
+			sourceTree = "<group>";
+		};
+		F5649AB318E7ED1400F11CFA /* YijianTable */ = {
+			isa = PBXGroup;
+			children = (
+				F5F78B8718E5CDA7004EE012 /* YijianTableViewController.h */,
+				F5F78B8818E5CDA7004EE012 /* YijianTableViewController.m */,
+				F5F78B8918E5CDA7004EE012 /* YijianTableViewCell.h */,
+				F5F78B8A18E5CDA7004EE012 /* YijianTableViewCell.m */,
+			);
+			path = YijianTable;
+			sourceTree = "<group>";
+		};
 		F5F78B2C18E5BE45004EE012 = {
 			isa = PBXGroup;
 			children = (
@@ -177,15 +232,12 @@
 		F5F78B3E18E5BE45004EE012 /* 有意见 0.2 */ = {
 			isa = PBXGroup;
 			children = (
+				F5F78B4A18E5BE45004EE012 /* Main.storyboard */,
 				F5F78B4718E5BE45004EE012 /* YijianAppDelegate.h */,
 				F5F78B4818E5BE45004EE012 /* YijianAppDelegate.m */,
-				F5F78B4A18E5BE45004EE012 /* Main.storyboard */,
-				F5F78BA018E646C9004EE012 /* ObjectListTableViewController.h */,
-				F5F78BA118E646C9004EE012 /* ObjectListTableViewController.m */,
-				F5F78BA318E646E9004EE012 /* ObjectListTableViewCell.h */,
-				F5F78BA418E646E9004EE012 /* ObjectListTableViewCell.m */,
-				F572BB4718E6C37F002C53DE /* DrawBar.h */,
-				F572BB4818E6C37F002C53DE /* DrawBar.m */,
+				F5649AAE18E7B20400F11CFA /* objectNameList */,
+				F5649AB218E7ED1400F11CFA /* Yijianmap */,
+				F5649AB318E7ED1400F11CFA /* YijianTable */,
 				F5F78B9918E5D52F004EE012 /* AddYijianViewController.h */,
 				F5F78B9A18E5D52F004EE012 /* AddYijianViewController.m */,
 				F5F78B9618E5D3BF004EE012 /* YijianUINavigationItem.h */,
@@ -196,10 +248,6 @@
 				F5F78B8E18E5D300004EE012 /* YijianUINavigationViewController.m */,
 				F5F78B4D18E5BE45004EE012 /* YijianViewController.h */,
 				F5F78B4E18E5BE45004EE012 /* YijianViewController.m */,
-				F5F78B8718E5CDA7004EE012 /* YijianTableViewController.h */,
-				F5F78B8818E5CDA7004EE012 /* YijianTableViewController.m */,
-				F5F78B8918E5CDA7004EE012 /* YijianTableViewCell.h */,
-				F5F78B8A18E5CDA7004EE012 /* YijianTableViewCell.m */,
 				F5F78B5018E5BE45004EE012 /* Images.xcassets */,
 				F5F78B3F18E5BE45004EE012 /* Supporting Files */,
 			);
@@ -209,6 +257,8 @@
 		F5F78B3F18E5BE45004EE012 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F5649AB418E7EFFA00F11CFA /* bubble.png */,
+				F5649AB518E7EFFA00F11CFA /* bubble@2x.png */,
 				F5F78B7D18E5C830004EE012 /* heart_empty.png */,
 				F5F78B7E18E5C830004EE012 /* heart_empty@2x.png */,
 				F572BB4518E698A3002C53DE /* heart_full.png */,
@@ -333,6 +383,7 @@
 				F5F78B8618E5C854004EE012 /* Icon@2x.png in Resources */,
 				F5F78B7718E5C675004EE012 /* icon_object_up.png in Resources */,
 				F5F78B8018E5C830004EE012 /* heart_empty@2x.png in Resources */,
+				F5649AB618E7EFFA00F11CFA /* bubble.png in Resources */,
 				F5F78B5118E5BE45004EE012 /* Images.xcassets in Resources */,
 				F5F78B7B18E5C68C004EE012 /* launch_small.png in Resources */,
 				F5F78B7618E5C675004EE012 /* icon_hot_up@2x.png in Resources */,
@@ -344,6 +395,7 @@
 				F5F78B7318E5C675004EE012 /* icon_here_up.png in Resources */,
 				F5F78B8518E5C854004EE012 /* Icon.png in Resources */,
 				F5F78B7418E5C675004EE012 /* icon_here_up@2x.png in Resources */,
+				F5649AB718E7EFFA00F11CFA /* bubble@2x.png in Resources */,
 				F5F78B7518E5C675004EE012 /* icon_hot_up.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,8 +415,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5649AB118E7B74800F11CFA /* YijianUnderObjectTableViewCell.m in Sources */,
 				F5F78B4F18E5BE45004EE012 /* YijianViewController.m in Sources */,
+				F5649ABD18E8337900F11CFA /* BNRMapPoint.m in Sources */,
 				F5F78B9218E5D36C004EE012 /* YijianUINavigationBar.m in Sources */,
+				F5649AAB18E7B08A00F11CFA /* YijianUnderObjectNameTableViewController.m in Sources */,
 				F5F78B8C18E5CDA7004EE012 /* YijianTableViewCell.m in Sources */,
 				F5F78B8B18E5CDA7004EE012 /* YijianTableViewController.m in Sources */,
 				F5F78B9B18E5D52F004EE012 /* AddYijianViewController.m in Sources */,
@@ -373,6 +428,7 @@
 				F5F78BA218E646C9004EE012 /* ObjectListTableViewController.m in Sources */,
 				F5F78B4918E5BE45004EE012 /* YijianAppDelegate.m in Sources */,
 				F5F78B8F18E5D300004EE012 /* YijianUINavigationViewController.m in Sources */,
+				F5649ABA18E81B1A00F11CFA /* MapViewController.m in Sources */,
 				F5F78B4518E5BE45004EE012 /* main.m in Sources */,
 				F572BB4918E6C37F002C53DE /* DrawBar.m in Sources */,
 			);
