@@ -13,6 +13,8 @@
 		F5649AB718E7EFFA00F11CFA /* bubble@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5649AB518E7EFFA00F11CFA /* bubble@2x.png */; };
 		F5649ABA18E81B1A00F11CFA /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5649AB918E81B1A00F11CFA /* MapViewController.m */; };
 		F5649ABD18E8337900F11CFA /* BNRMapPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = F5649ABC18E8337900F11CFA /* BNRMapPoint.m */; };
+		F5649AC018E87DD600F11CFA /* titleBarBG.png in Resources */ = {isa = PBXBuildFile; fileRef = F5649ABE18E87DD600F11CFA /* titleBarBG.png */; };
+		F5649AC118E87DD600F11CFA /* titleBarBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5649ABF18E87DD600F11CFA /* titleBarBG@2x.png */; };
 		F572BB4418E6981E002C53DE /* heart_full@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F572BB4218E6981E002C53DE /* heart_full@2x.png */; };
 		F572BB4618E698A3002C53DE /* heart_full.png in Resources */ = {isa = PBXBuildFile; fileRef = F572BB4518E698A3002C53DE /* heart_full.png */; };
 		F572BB4918E6C37F002C53DE /* DrawBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F572BB4818E6C37F002C53DE /* DrawBar.m */; };
@@ -76,6 +78,8 @@
 		F5649AB918E81B1A00F11CFA /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		F5649ABB18E8337900F11CFA /* BNRMapPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRMapPoint.h; sourceTree = "<group>"; };
 		F5649ABC18E8337900F11CFA /* BNRMapPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRMapPoint.m; sourceTree = "<group>"; };
+		F5649ABE18E87DD600F11CFA /* titleBarBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = titleBarBG.png; sourceTree = "<group>"; };
+		F5649ABF18E87DD600F11CFA /* titleBarBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "titleBarBG@2x.png"; sourceTree = "<group>"; };
 		F572BB4218E6981E002C53DE /* heart_full@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heart_full@2x.png"; sourceTree = "<group>"; };
 		F572BB4518E698A3002C53DE /* heart_full.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart_full.png; sourceTree = "<group>"; };
 		F572BB4718E6C37F002C53DE /* DrawBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DrawBar.h; path = ../DrawBar.h; sourceTree = "<group>"; };
@@ -257,6 +261,8 @@
 		F5F78B3F18E5BE45004EE012 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F5649ABE18E87DD600F11CFA /* titleBarBG.png */,
+				F5649ABF18E87DD600F11CFA /* titleBarBG@2x.png */,
 				F5649AB418E7EFFA00F11CFA /* bubble.png */,
 				F5649AB518E7EFFA00F11CFA /* bubble@2x.png */,
 				F5F78B7D18E5C830004EE012 /* heart_empty.png */,
@@ -391,11 +397,13 @@
 				F5F78B4318E5BE45004EE012 /* InfoPlist.strings in Resources */,
 				F5F78B7C18E5C68C004EE012 /* launch.png in Resources */,
 				F5F78B4C18E5BE45004EE012 /* Main.storyboard in Resources */,
+				F5649AC018E87DD600F11CFA /* titleBarBG.png in Resources */,
 				F5F78B7F18E5C830004EE012 /* heart_empty.png in Resources */,
 				F5F78B7318E5C675004EE012 /* icon_here_up.png in Resources */,
 				F5F78B8518E5C854004EE012 /* Icon.png in Resources */,
 				F5F78B7418E5C675004EE012 /* icon_here_up@2x.png in Resources */,
 				F5649AB718E7EFFA00F11CFA /* bubble@2x.png in Resources */,
+				F5649AC118E87DD600F11CFA /* titleBarBG@2x.png in Resources */,
 				F5F78B7518E5C675004EE012 /* icon_hot_up.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
