@@ -84,6 +84,7 @@
 		F572BB4518E698A3002C53DE /* heart_full.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart_full.png; sourceTree = "<group>"; };
 		F572BB4718E6C37F002C53DE /* DrawBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DrawBar.h; path = ../DrawBar.h; sourceTree = "<group>"; };
 		F572BB4818E6C37F002C53DE /* DrawBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DrawBar.m; path = ../DrawBar.m; sourceTree = "<group>"; };
+		F5B9EEC819054D2D0050604C /* FZQKBYS.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = FZQKBYS.TTF; sourceTree = "<group>"; };
 		F5F78B3518E5BE45004EE012 /* 有意见 0.2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "有意见 0.2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5F78B3818E5BE45004EE012 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F5F78B3A18E5BE45004EE012 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -261,6 +262,7 @@
 		F5F78B3F18E5BE45004EE012 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F5B9EEC819054D2D0050604C /* FZQKBYS.TTF */,
 				F5649ABE18E87DD600F11CFA /* titleBarBG.png */,
 				F5649ABF18E87DD600F11CFA /* titleBarBG@2x.png */,
 				F5649AB418E7EFFA00F11CFA /* bubble.png */,
@@ -354,6 +356,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = DM;
 				TargetAttributes = {
+					F5F78B3418E5BE45004EE012 = {
+						DevelopmentTeam = 5Q42RBLH7L;
+					};
 					F5F78B5518E5BE45004EE012 = {
 						TestTargetID = F5F78B3418E5BE45004EE012;
 					};
@@ -564,10 +569,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "有意见 0.2/有意见 0.2-Prefix.pch";
 				INFOPLIST_FILE = "有意见 0.2/有意见 0.2-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -578,10 +585,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "有意见 0.2/有意见 0.2-Prefix.pch";
 				INFOPLIST_FILE = "有意见 0.2/有意见 0.2-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

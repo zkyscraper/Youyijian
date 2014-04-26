@@ -15,6 +15,8 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         // Initialization code
+        
+          [self.contentLabel setFont:[UIFont fontWithName:@"方正清刻本悦宋简体" size:17.0]];
     }
     return self;
 }
@@ -25,6 +27,8 @@
     [self.tongganButton setImage:[UIImage imageNamed:@"heart_empty.png"] forState:UIControlStateSelected];
     
     [self.tongganButton setImage:[UIImage imageNamed:@"heart_full.png"] forState:UIControlStateSelected];
+    
+
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
