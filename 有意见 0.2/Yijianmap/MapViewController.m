@@ -33,6 +33,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
+//设置地图上的字体？？？
+//    [_worldView setFont:[UIFont fontWithName:@"FZQKBYSJW--GB1-0" size:17.0]];
+    
     [_worldView setDelegate:self];
     [_worldView setShowsUserLocation:YES];
     
@@ -59,7 +63,10 @@
     
     [_worldView addAnnotations:_mps];
     
-    
+    [self.navigationController.navigationBar setTitleTextAttributes:
+     [NSDictionary dictionaryWithObjectsAndKeys:
+      [UIFont fontWithName:@"FZQKBYSJW--GB1-0" size:18],
+      NSFontAttributeName, nil]];
 }
 
 - (void)didReceiveMemoryWarning

@@ -58,6 +58,11 @@
                       @"100"
                       ];
 
+    [self.navigationController.navigationBar setTitleTextAttributes:
+     [NSDictionary dictionaryWithObjectsAndKeys:
+      [UIFont fontWithName:@"FZQKBYSJW--GB1-0" size:18],
+      NSFontAttributeName, nil]];
+    
 }
 
 
@@ -93,11 +98,14 @@
     if (cell == nil) {
         cell = [[ObjectListTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
         cell.contentView.backgroundColor = [UIColor clearColor];
+
     }
     
 //    cell.textLabel.frame = CGRectMake(40, 30, 150, 20);
 //    cell.textLabel.textAlignment =NSTextAlignmentLeft;
-
+    
+    [cell.objectTilteName setFont:[UIFont fontWithName:@"FZQKBYSJW--GB1-0" size:17.0]];
+    
     cell.objectTilteName.text = [_objectNames objectAtIndex:indexPath.row];
     cell.objectTilteName.text = [cell.objectTilteName.text stringByAppendingString:@"    有 "];
      cell.objectTilteName.text = [cell.objectTilteName.text stringByAppendingString:[_objectNumbers objectAtIndex:indexPath.row]];

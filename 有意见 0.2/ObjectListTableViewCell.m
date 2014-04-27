@@ -16,7 +16,7 @@
     if (self) {
         // Initialization code
 
-        
+        [self.objectTilteName setFont:[UIFont fontWithName:@"FZQKBYSJW--GB1-0" size:17.0]];
     }
     return self;
 }

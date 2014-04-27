@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F5014B35190CF904002E1D80 /* FZQKBYS.TTF in Resources */ = {isa = PBXBuildFile; fileRef = F5B9EEC819054D2D0050604C /* FZQKBYS.TTF */; };
 		F5649AAB18E7B08A00F11CFA /* YijianUnderObjectNameTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5649AAA18E7B08A00F11CFA /* YijianUnderObjectNameTableViewController.m */; };
 		F5649AB118E7B74800F11CFA /* YijianUnderObjectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5649AB018E7B74800F11CFA /* YijianUnderObjectTableViewCell.m */; };
 		F5649AB618E7EFFA00F11CFA /* bubble.png in Resources */ = {isa = PBXBuildFile; fileRef = F5649AB418E7EFFA00F11CFA /* bubble.png */; };
@@ -388,6 +389,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5014B35190CF904002E1D80 /* FZQKBYS.TTF in Resources */,
 				F572BB4418E6981E002C53DE /* heart_full@2x.png in Resources */,
 				F572BB4618E698A3002C53DE /* heart_full.png in Resources */,
 				F5F78B8418E5C854004EE012 /* Icon-80.png in Resources */,
