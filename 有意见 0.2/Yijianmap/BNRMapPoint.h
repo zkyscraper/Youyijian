@@ -16,11 +16,11 @@
     
 }
 
-- (id)initWithCoordinate:(CLLocationCoordinate2D)c title:(NSString *) t subTitle:(NSString *)s;
+- (id)initWithCoordinate:(CLLocationCoordinate2D)c title:(NSString *) t subtitle:(NSString *)s;
 
 @property(nonatomic, readonly) CLLocationCoordinate2D coordinate;
 @property(nonatomic,copy) NSString *title;
-@property(nonatomic,copy) NSString *subTitle;
+@property(nonatomic,copy) NSString *subtitle;
 @property(nonatomic,readonly) UIImage *image;
 
 @end

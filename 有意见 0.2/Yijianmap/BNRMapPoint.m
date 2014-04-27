@@ -11,15 +11,15 @@
 
 
 @implementation BNRMapPoint
-@synthesize coordinate,title,image,subTitle;
+@synthesize coordinate,title,image,subtitle;
 
--(id)initWithCoordinate:(CLLocationCoordinate2D)c title:(NSString *)t subTitle:(NSString *)s
+-(id)initWithCoordinate:(CLLocationCoordinate2D)c title:(NSString *)t subtitle:(NSString *)s
 {
     self =[super init];
     if (self) {
         coordinate =c;
         title =t;
-        subTitle =s;
+        subtitle =s;
         image = [UIImage imageNamed:@"bubble.png"];
         
 //        [self setTitle:t];
