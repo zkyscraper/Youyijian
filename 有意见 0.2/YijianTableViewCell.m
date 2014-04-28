@@ -24,7 +24,7 @@
 - (void)awakeFromNib
 {
     // Initialization code
-    [self.contentLabel setFont:[UIFont fontWithName:@"FZQKBYSJW--GB1-0" size:17.0]];
+    [self.contentLabel setFont:[UIFont fontWithName:@"FZQKBYSJW--GB1-0" size:15.0]];
     [self.titleButton setFont:[UIFont fontWithName:@"FZQKBYSJW--GB1-0" size:17.0]];
     
     [self.tongganButton setImage:[UIImage imageNamed:@"heart_empty.png"] forState:UIControlStateSelected];
