@@ -19,6 +19,7 @@
     [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
     [locationManager startUpdatingLocation];
     
+    [self setupAppearance];
     
     return YES;
 }
@@ -48,6 +49,25 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - private
+
+- (void)setupAppearance
+{
+    float version = [[[UIDevice currentDevice] systemVersion] floatValue];
+    if(version >= 5.0)
+    {
+        //导航栏
+        //        NSString *imageName = @"";
+        //        UIImage *tempImage = [[UIImage imageNamed:imageName] stretchableImageWithLeftCapWidth:5 topCapHeight:5];
+        //        [[UINavigationBar appearance] setBackgroundImage:tempImage forBarMetrics:UIBarMetricsDefault];
+        
+        NSMutableDictionary *attributesDictionary = [NSMutableDictionary dictionary];
+        [attributesDictionary setValue:[UIFont fontWithName:@"FZQKBYSJW--GB1-0" size:18.0] forKey:NSFontAttributeName];
+        [attributesDictionary setValue:[UIColor blackColor] forKey:NSForegroundColorAttributeName];
+        [[UINavigationBar appearance] setTitleTextAttributes:attributesDictionary];
+    }
 }
 
 -(void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation

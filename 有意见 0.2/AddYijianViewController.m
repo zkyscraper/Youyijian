@@ -6,9 +6,13 @@
 //  Copyright (c) 2014年 DM. All rights reserved.
 //
 
+#import <CoreLocation/CoreLocation.h>
 #import "AddYijianViewController.h"
 
-@interface AddYijianViewController ()
+@interface AddYijianViewController ()<CLLocationManagerDelegate>
+
+@property (strong, nonatomic) CLLocationManager *locationManager;
+@property (strong, nonatomic) CLLocation *location;
 
 @end
 
@@ -29,6 +33,15 @@
     // Do any additional setup after loading the view.
     UIBarButtonItem * it = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:self action:@selector(myReturned:)];
     [self.navigationItem setLeftBarButtonItem:it];
+    
+    self.locationLabel.text = @"正在定位...";
+    if([CLLocationManager locationServicesEnabled])
+    {
+        [self.locationManager startUpdatingLocation];
+    }
+    else{
+        self.locationLabel.text = @"无法定位";
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -37,15 +50,70 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    [self.locationManager stopUpdatingLocation];
+    self.locationManager = nil;
+}
+
+#pragma mark - getter
+
+- (CLLocationManager *)locationManager
+{
+    if (_locationManager == nil) {
+        _locationManager = [[CLLocationManager alloc]init];
+        _locationManager.delegate = self;
+        _locationManager.desiredAccuracy=kCLLocationAccuracyBest;
+        _locationManager.distanceFilter = 1000.0f;
+//        _locationManager.purpose = @"To provide functionality based on user's current location.";
+
+    }
+    
+    return _locationManager;
+}
+
+#pragma mark - CLLocationManagerDelegate
+
+-(void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+{
+    self.location = newLocation;
+    CLGeocoder *geocoder = [[CLGeocoder alloc] init];
+    [geocoder reverseGeocodeLocation: newLocation completionHandler:^(NSArray *array, NSError *error) {
+        if (array.count > 0) {
+            CLPlacemark *placemark = [array objectAtIndex:0];
+            self.locationLabel.text = placemark.name;
+        }
+    }];
+}
+
+-(void)locationManager:(CLLocationManager *)manager
+      didFailWithError:(NSError *)error
+{
+    self.locationLabel.text = @"定位失败";
+}
+
+#pragma mark - action
+
 -(IBAction)myReturned:(UIStoryboardSegue *)segue {
     [self.navigationController popViewControllerAnimated:YES];
 }
 
 -(IBAction)submit:(id)sender
 {
-    if(YES){
-        [self.navigationController popViewControllerAnimated:YES];
+    if (self.location == nil) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"错误" message:@"获取不到位置信息" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alertView show];
+        
+        return;
     }
+    
+    [[XDRequestManager defaultManager] requestWithMode:@"POST" path:@"insert.php" parameters:nil bodys:@{@"objectName":self.objectTextField.text, @"contentString":self.contentTextField.text, @"latitude":[NSString stringWithFormat:@"%lf", self.location.coordinate.latitude], @"longitude":[NSString stringWithFormat:@"%lf", self.location.coordinate.longitude]} success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [self.navigationController popViewControllerAnimated:YES];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        //
+    }];
     
     
 }
@@ -54,16 +122,5 @@
     // 隐藏键盘.
     [sender resignFirstResponder];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

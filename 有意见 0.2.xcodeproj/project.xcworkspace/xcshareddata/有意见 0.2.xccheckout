@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>2AF6C8C1-4BB2-4323-9822-8103AFC92F64</string>
+	<string>949CE4AE-79D2-4379-AA48-2086E3415AD7</string>
 	<key>IDESourceControlProjectName</key>
 	<string>有意见 0.2</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>F9853559-6750-470B-99A8-55822F712045</key>
-		<string>https://github.com/zkyscraper/----0.2.git</string>
+		<key>B5C8A898-0D00-482F-9ABD-75A20636FDCD</key>
+		<string>https://github.com/zkyscraper/Youyijian.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>有意见 0.2.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>F9853559-6750-470B-99A8-55822F712045</key>
+		<key>B5C8A898-0D00-482F-9ABD-75A20636FDCD</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/zkyscraper/----0.2.git</string>
+	<string>https://github.com/zkyscraper/Youyijian.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>F9853559-6750-470B-99A8-55822F712045</string>
+	<string>B5C8A898-0D00-482F-9ABD-75A20636FDCD</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>F9853559-6750-470B-99A8-55822F712045</string>
+			<string>B5C8A898-0D00-482F-9ABD-75A20636FDCD</string>
 			<key>IDESourceControlWCCName</key>
-			<string>有意见 0.2</string>
+			<string>Youyijian</string>
 		</dict>
 	</array>
 </dict>

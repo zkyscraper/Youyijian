@@ -57,12 +57,6 @@
                       @"200",
                       @"100"
                       ];
-
-    [self.navigationController.navigationBar setTitleTextAttributes:
-     [NSDictionary dictionaryWithObjectsAndKeys:
-      [UIFont fontWithName:@"FZQKBYSJW--GB1-0" size:18],
-      NSFontAttributeName, nil]];
-    
 }
 
 
