@@ -9,6 +9,8 @@
 #import <CoreLocation/CoreLocation.h>
 #import "AddYijianViewController.h"
 
+#import "XDRequestManager.h"
+
 @interface AddYijianViewController ()<CLLocationManagerDelegate>
 
 @property (strong, nonatomic) CLLocationManager *locationManager;
@@ -23,6 +25,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        _location = nil;
     }
     return self;
 }
@@ -109,13 +112,12 @@
         return;
     }
     
-    [[XDRequestManager defaultManager] requestWithMode:@"POST" path:@"insert.php" parameters:nil bodys:@{@"objectName":self.objectTextField.text, @"contentString":self.contentTextField.text, @"latitude":[NSString stringWithFormat:@"%lf", self.location.coordinate.latitude], @"longitude":[NSString stringWithFormat:@"%lf", self.location.coordinate.longitude]} success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    NSDictionary *parameter = @{@"objectName":self.objectTextField.text, @"contentString":self.contentTextField.text, @"latitude":[NSString stringWithFormat:@"%lf", self.location.coordinate.latitude], @"longitude":[NSString stringWithFormat:@"%lf", self.location.coordinate.longitude]};
+    [[XDRequestManager defaultManager] postPath:@"insert.php" parameters:parameter success:^(AFHTTPRequestOperation *operation, id responseObject) {
         [self.navigationController popViewControllerAnimated:YES];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         //
     }];
-    
-    
 }
 
 - (IBAction)TextField_DidEndOnExit:(id)sender {

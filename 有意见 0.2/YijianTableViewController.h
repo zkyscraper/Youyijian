@@ -7,13 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <CoreLocation/CoreLocation.h>
 
 @interface YijianTableViewController : UITableViewController
 
-
-@property (nonatomic, strong) NSArray *objectTitles;
-@property (nonatomic, strong) NSArray *yijianContents;
-@property (nonatomic, strong) NSArray *similarYijians;
 @property (nonatomic) int currentId;
+
 @end

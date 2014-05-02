@@ -9,8 +9,11 @@
 #import "YijianTableViewController.h"
 #import "YijianTableViewCell.h"
 #import "YijianUnderObjectNameTableViewController.h"
+#import "XDRequestManager.h"
 
 @interface YijianTableViewController ()
+
+@property (strong, nonatomic) NSMutableArray *dataArray;
 
 @end
 
@@ -21,6 +24,7 @@
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
+        _dataArray = [NSMutableArray array];
     }
     return self;
 }
@@ -30,41 +34,7 @@
     [super viewDidLoad];
     
     // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-
-    
-    _objectTitles = @[@"百度搜索",
-                      @"中关村软件园",
-                      @"小米手机",
-                      @"百度搜索",
-                      @"百度搜索"];
-    
-    _yijianContents = @[@"我搜索的是中国人寿的报案电话，你非要给我一个中国平安的！！！我是要报案啊！！！",
-                        @"公司架构又调整了，我们这些底层员工以后看来是越来越没上升空间了。",
-                        @"饥饿营销做得太过分了，手机质量问题明明挺严重，却硬要造全国疯抢的局面。",
-                        @"饥饿营销做得太过分了，手机质量问题明明挺严重，却硬要造全国疯抢的局面。",
-                        @"饥饿营销做得太过分了，手机质量问题明明挺严重，却硬要造全国疯抢的局面。"];
-    
-    _similarYijians =@[@"2000",
-                       @"1000",
-                       @"1000",
-                       @"1000",
-                       @"1000"];
-    
-/*
-    //    遍历所有字体。这是已经把新字体添加进去了
-    NSArray *fontFamilies = [UIFont familyNames];
-    for (int i = 0; i < [fontFamilies count]; i++)
-    {
-        NSString *fontFamily = [fontFamilies objectAtIndex:i];
-        NSArray *fontNames = [UIFont fontNamesForFamilyName:[fontFamilies objectAtIndex:i]];
-        NSLog (@"%@: %@", fontFamily, fontNames);
-    }
- */
+    [self tableViewDidTriggerHeaderRefresh];
 }
 
 - (void)didReceiveMemoryWarning
@@ -73,11 +43,19 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (NSMutableArray *)dataArray
+{
+    if (_dataArray == nil) {
+        _dataArray = [NSMutableArray array];
+    }
+    
+    return _dataArray;
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-
     // Return the number of sections.
     return 1;
 }
@@ -86,89 +64,48 @@
 {
 
     // Return the number of rows in the section.
-    return _yijianContents.count;
+    return self.dataArray.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cellIdentifier = @"YijianTableCell";
-    YijianTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    YijianTableViewCell *cell = (YijianTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     // Configure the cell...
-    int row =[indexPath row];
-    cell.myId =row;
-//  cell.titleButton.currentTitle = _ObjectTitles[row];
-//    cell.similarButton.text = [_SimilarYijian[row];
+    if (cell == nil) {
+        cell = [[YijianTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    }
     
-    [cell.titleButton setTitle:_objectTitles[row] forState:UIControlStateNormal];
-    cell.contentLabel.text = _yijianContents[row];
-
-    
-    NSString *newButtonText = @"有1000条同感意见";
-//    [newButtonText stringByAppendingString:_similarYijians[row]];
-[newButtonText stringByAppendingString:@"1000"];
-    [newButtonText stringByAppendingString:@"条同感意见"];
-    
-
+    if (indexPath.row < [self.dataArray count]) {
+        NSDictionary *dic = [self.dataArray objectAtIndex:indexPath.row];
+        cell.indexPath = indexPath;
+        NSString *title = [dic objectForKey:@"objectName"];
+        if (!title || [title isKindOfClass:[NSNull class]]) {
+            title = @"";
+        }
+        [cell.titleButton setTitle:title forState:UIControlStateNormal];
+        
+        NSString *content = [dic objectForKey:@"contentString"];
+        if (!content || [content isKindOfClass:[NSNull class]]) {
+            content = @"";
+        }
+        cell.contentLabel.text = content;
+        
+//        NSString *tmpStr = [NSString stringWithFormat:@"有%@条同感意见", [dic objectForKey:@""]];
+        
+    }
     
     return cell;
 }
 
+#pragma mark - Table view delegate
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-//-(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 //{
-//    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
 //    
-//    if (self) {
-//        locationManager = [[CLLocationManager alloc]init];
-//        [locationManager setDelegate:self];
-//        
-//        [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
-//        [locationManager startUpdatingLocation];
-//    }
-//    return self;
 //}
-
-
-
 
 #pragma mark - Navigation
 
@@ -180,18 +117,30 @@
     
     if ([[segue identifier] isEqualToString:@"ShowObjectYijianFromFirst"]) {
         YijianUnderObjectNameTableViewController *detailViewController = [segue destinationViewController];
+        NSIndexPath *index = [self.tableView indexPathForSelectedRow];
+        NSString *title = [[self.dataArray objectAtIndex:index.row] objectForKey:@"objectName"];
+        if (!title || [title isKindOfClass:[NSNull class]]) {
+            title = @"";
+        }
         
-//        UITouch *touch = [[UITouch alloc]init];
-//        NSIndexPath *myIndexPath = [self.tableView indexPathForRowAtPoint:[touch locationInView:self.view]];
-//        YijianUnderObjectTableViewCell *cell = (YijianUnderObjectTableViewCell *) [[[titleButton superview]superview] superview];
-        
-//怎么才能知道当前的按钮在哪个Cell里头啊？？？
-        NSIndexPath *myIndexPath = [self.tableView indexPathForSelectedRow];
-        int row = [myIndexPath row];
-//        int row = _currentId;
-        detailViewController.name = _objectTitles[row];
+        detailViewController.title = title;
     }
 }
 
+#pragma mark - date
+
+- (void)tableViewDidTriggerHeaderRefresh
+{
+    [self.dataArray removeAllObjects];
+    __block __weak YijianTableViewController *weakSelf = self;
+    [[XDRequestManager defaultManager] getPath:@"getJSON.php" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        if (responseObject && [responseObject count] > 0) {
+            [weakSelf.dataArray addObjectsFromArray:responseObject];
+            
+            [weakSelf.tableView reloadData];
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    }];
+}
 
 @end
