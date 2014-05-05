@@ -9,7 +9,9 @@
 #import "YijianTableViewController.h"
 #import "YijianTableViewCell.h"
 #import "YijianUnderObjectNameTableViewController.h"
+
 #import "XDRequestManager.h"
+#import "SVPullToRefresh.h"
 
 @interface YijianTableViewController ()
 
@@ -34,7 +36,18 @@
     [super viewDidLoad];
     
     // Uncomment the following line to preserve selection between presentations.
-    [self tableViewDidTriggerHeaderRefresh];
+    __weak YijianTableViewController *weakSelf = self;
+    [self.tableView addPullToRefreshWithActionHandler:^{
+        [weakSelf tableViewDidTriggerHeaderRefresh];
+    }];
+    [self.tableView addInfiniteScrollingWithActionHandler:^{
+        [weakSelf tableViewDidTriggerFooterRefresh];
+    }];
+    
+    self.tableView.showsPullToRefresh = YES;
+    self.tableView.showsInfiniteScrolling = NO;
+    
+    [self.tableView triggerPullToRefresh];
 }
 
 - (void)didReceiveMemoryWarning
@@ -129,6 +142,31 @@
 
 #pragma mark - date
 
+///下拉刷新回调
+- (void)tableViewDidFinishHeaderRefreshReload:(BOOL)reload
+{
+    __weak YijianTableViewController *weakSelf = self;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (reload) {
+            [weakSelf.tableView reloadData];
+        }
+        [weakSelf.tableView.pullToRefreshView stopAnimating];
+    });
+}
+
+///上拉刷新回调
+- (void)tableViewDidFinishFooterRefreshReload:(BOOL)reload
+{
+    __weak YijianTableViewController *weakSelf = self;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (reload) {
+            [weakSelf.tableView reloadData];
+        }
+        
+        [weakSelf.tableView.infiniteScrollingView stopAnimating];
+    });
+}
+
 - (void)tableViewDidTriggerHeaderRefresh
 {
     [self.dataArray removeAllObjects];
@@ -136,11 +174,16 @@
     [[XDRequestManager defaultManager] getPath:@"getJSON.php" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         if (responseObject && [responseObject count] > 0) {
             [weakSelf.dataArray addObjectsFromArray:responseObject];
-            
-            [weakSelf.tableView reloadData];
         }
+        
+        [weakSelf tableViewDidFinishHeaderRefreshReload:YES];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
     }];
+}
+
+- (void)tableViewDidTriggerFooterRefresh
+{
+    
 }
 
 @end
